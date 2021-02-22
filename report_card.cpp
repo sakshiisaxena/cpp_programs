@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
+
 class ReportCard
 {
     int marks[5],total;
@@ -12,6 +13,7 @@ class ReportCard
            void cal_percentage();
            void find_grade();	
 };
+
 int main()
 {
     ReportCard rc;
