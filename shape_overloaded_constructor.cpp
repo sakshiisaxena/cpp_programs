@@ -2,69 +2,60 @@
 using namespace std;
 class Shape
 {
-	int s,l,b;
-	float h,r;
-
-	public:
-		void area(int l, int b);
-		void area(float r);
-		void area(int s);
-		void area(int b, float h);
-		Shape()
+ 	public:
+		int area(int x,int y)
 		{
-			l=0,b=0;
+			int rectangle;
+			rectangle=x*y;	
+		}
+		float area(float r)
+		{
+			float pi=3.14;
+			float circle;
+			circle=pi*r*r;
+		}
+		int area(int s)
+		{
+		    int square;	
+			square=s*s;
+		}
+		float area(int b, float h)
+		{
+		    float triangle;
+		    float half=0.5;
+		    triangle=(half*b*h);	
 		}
 };
-
-void Shape::area(int l, int b)
-	{
-		int rectangle;
-		rectangle = l*b;
-		cout<<"area of rectangle is = "<<rectangle<<endl;
-	
-	}
-void Shape::area(float r)
-	{
-		float circle;
-		circle = 3.14*r*r;
-	    cout<<"area of circle is = "<<circle<<endl;
-		
-	}
-void Shape::area(int s)
-	{
-		int square;
-		square = s*s;
-	    cout<<"area of square is = "<<square<<endl;
-		
-	}
-void Shape::area(int b, float h)
-	{
-		float triangle;
-		triangle = 0.5*b*h;
-		cout<<"area of triangle is = "<<triangle<<endl;
-	
-	}
-
 int main()
 {
-	int length,breadth,side;
-	float radius,height;
-	cout<<"enter length of rectangle"<<endl;
-	cin>>length;
-	cout<<"enter breadth of rectangle"<<endl;
-	cin>>breadth;
-	cout<<"enter side of square"<<endl;
-	cin>>side;
-	cout<<"enter radius of circle"<<endl;
-	cin>>radius;
-	cout<<"enter height of triangle"<<endl;
-	cin>>height;
-	
-	Shape s;
-	 s.area(length,breadth);
-	 s.area(radius);
-	 s.area(side);
-	 s.area(breadth,height);
-	
-}
+	int length;
+	int breadth;
+	float radius;
+	int side;
+	int base;
+	float height;
+	int rectangle,square;
+	float circle, triangle;
+	cout<<"Enter the length of the rectangle:";
+		cin>>length;
+		cout<<"Enter the breadth of the rectangle:";
+		cin>>breadth;
+		cout<<"Enter the radius of the circle:";
+		cin>>radius;
+		cout<<"Enter the side of the square:";
+		cin>>side;
+		cout<<"Enter the base of the triangle:";
+		cin>>base;
+		cout<<"Enter the height of the triangle:";
+		cin>>height;	
 
+	Shape S;
+	 rectangle=S.area(length ,breadth);
+	 square=S.area(side);
+	 triangle=S.area(base,height);
+	 circle=S.area(radius);
+     cout<<endl<<"The area of the rectangle is :"<<rectangle;
+	 cout<<endl<<"The area of the circle is:"<<circle;
+	 cout<<endl<<"The area of the square is:"<<square;
+     cout<<endl<<"The area of the triangle is:"<<triangle;
+}

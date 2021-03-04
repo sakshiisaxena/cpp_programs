@@ -3,58 +3,60 @@ using namespace std;
 int swap(int, int);
 int swap(double,double);
 int swap(char, char);
-class SWAP
-{
-	public:
-		void swap(int &ix,int &iy)
+		int swap(int ix,int iy)
 		{
+			cout<<"Enter 2 integers: "<<endl;
+			cin>>ix>>iy;
+			cout<<"Before Swapping: "<<endl;
+			cout<<"ix="<<ix<<"\niy="<<iy<<endl;
 			int temp;;
 			temp=ix;
 			ix=iy;
 			iy=temp;
+			cout<<"\nAfter Swapping:"<<endl;
+			cout<<"ix="<<ix<<"\niy="<<iy;
+			return 1;
 		}
-		void swap(double &fx,double &fy)
+		
+		int swap(char cx,char cy)
 		{
-			float temp;
-			temp=fx;
-			fx=fy;
-			fy=temp;
-		}
-		void swap(char &cx,char &cy)
-		{
+			cout<<"\n\nEnter 2 characters: "<<endl;
+			cin>>cx>>cy;
+			cout<<"Before Swapping: "<<endl;
+			cout<<"cx="<<cx<<"\ncy="<<cy<<endl;
 			char temp;
 			temp=cx;
 			cx=cy;
 			cy=temp;
+			cout<<"\nAfter Swapping: "<<endl;
+			cout<<"cx="<<cx<<"\ncy="<<cy;
+			return 1;
 		}
-};
+		
+		int swap(double fx,double fy)
+		{
+			cout<<"\n\nEnter 2 real nos.: "<<endl;
+			cin>>fx>>fy;
+			cout<<"Before Swapping: "<<endl;
+			cout<<"fx="<<fx<<"\nfy="<<fy<<endl;
+			float temp;
+			temp=fx;
+			fx=fy;
+			fy=temp;
+			cout<<"\nAfter Swapping: "<<endl;
+			cout<<"fx="<<fx<<"\nfy="<<fy;
+			return 1;
+		}
 
 int main()
 {
-	SWAP s1, s2, s3;
 	int ix, iy;
-	double fx, fy;
 	char cx, cy;
-	cout<<"Enter 2 integers: "<<endl;
-	cin>>ix>>iy;
-	cout<<"Before Swapping: "<<endl;
-	cout<<"ix="<<ix<<"\niy="<<iy<<endl;
-	s1.swap(ix,iy);
-	cout<<"\nAfter Swapping:"<<endl;
-	cout<<"ix="<<ix<<"\niy="<<iy;
-	cout<<"\n\nEnter 2 floating point no:s: "<<endl;
-	cin>>fx>>fy;
-	cout<<"Before Swapping: "<<endl;
-	cout<<"fx="<<fx<<"\nfy="<<fy<<endl;
-	s2.swap(fx,fy);
-	cout<<"\nAfter Swapping: "<<endl;
-	cout<<"fx="<<fx<<"\nfy="<<fy;
-	cout<<"\n\nEnter 2 characters: "<<endl;
-	cin>>cx>>cy;
-	cout<<"Before Swapping: "<<endl;
-	cout<<"cx="<<cx<<"\ncy="<<cy<<endl;
-	s3.swap(cx,cy);
-	cout<<"\nAfter Swapping: "<<endl;
-	cout<<"cx="<<cx<<"\ncy="<<cy;
+	double fx, fy;
+	swap(1,2);
+	swap('a','b');
+	swap(2.5,5.0);
 	return 0;
 }
+
+

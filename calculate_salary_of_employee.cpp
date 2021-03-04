@@ -2,13 +2,21 @@
 using namespace std;
 class employee
 {
-    char name[100], dept[100];
+    string name;
 	int age;
-	long sal;
+	string dept;
+	float sal;
 	public:
 		void input();
 		void calsal();
 		void display();
+		Employee()
+			{
+			name="Ram";
+			age=25;
+			dept="Software";
+			sal=60000;
+			}
 };
 
 void employee::input()

@@ -1,10 +1,8 @@
 #include<iostream>
 using namespace std;
-
 class set
 {
     int a[6],n;
-
 public:
     void intersection(set,set);
     void Union(set, set);
@@ -26,11 +24,6 @@ public:
         }
 
     }
-    /*    set (set &s)
-        {
-            n=s.n;
-        }
-    */
 };
 void set::intersection(set s2, set s3)
 {
@@ -48,7 +41,6 @@ void set::intersection(set s2, set s3)
         }
     }
     n=k;
-    
 }
 void set:: Union(set s2, set s3)
 {
@@ -103,8 +95,7 @@ int main()
     }
     set s3(arr, 3);
     set s4;
-    
-    set s6;
+    set s5;
     s4.intersection(s2, s3);
     cout<<"\nSET 1: ";
     s2.display();
@@ -112,8 +103,8 @@ int main()
     s3.display();
     cout<<"\nINTERSECTION: ";
     s4.display();
-    s6.Union(s2, s3);
+    s5.Union(s2, s3);
     cout<<"\nUNION: ";
-    s6.display();
+    s5.display();
     return 0;
 }
