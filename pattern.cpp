@@ -1,16 +1,18 @@
 #include <iostream>
 using namespace std;
+class pattern{
+	public:
+		void row();
+};
 
-int main()
+void pattern::row()
 {
-    int rows;
-
+	int rows;
     cout << "Enter number of rows: ";
     cin >> rows;
-
-    for(int i = 1; i <= rows; ++i)
+    for(int i = 1; i <= rows; i++)
     {
-        for(int j = 1; j <= i; ++j)
+        for(int j = 1; j <= i; j++)
         {
             if(j % 2 == 1)
             {
@@ -23,5 +25,9 @@ int main()
         }
         cout << "\n";
     }
-    return 0;
+}
+int main()
+{
+    pattern ob;
+    ob.row();
 }

@@ -18,9 +18,9 @@ int main()
 	{
 	  line obj;
 	  float val1,val2;
-	  cout<<"\nEnter 1st value:";
+	  cout<<"\nEnter the value:";
 	  cin>>val1;
-	  cout<<"\nEnter 2nd value:";
+	  cout<<"\nEnter the value of the multiplier:";
 	  cin>>val2;
 	  cout<<"\nMultiplication value is :: "<<obj.mul(val1,val2);
 	  cout<<"\n\nCube value is :: "<<obj.cube(val1)<<"\n";

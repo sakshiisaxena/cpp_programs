@@ -43,17 +43,17 @@ void palindrome::checkpalindrome()
 	if(num==rev)
 	{
 		cout<<"\nyes, it is a palindrome";
-		retryOption();
+		//retryOption();
 	}
 	else
 	{
 		cout<<"\nNot a palindrome";
-		retryOption();
+		//retryOption();
 	}	
 	
 }
 
-void retryOption()
+/*void retryOption()
 {
 	int r;
 	cout<<"\n\nWant to retry?\n Press 1 for Yes \n 0 for Exit";
@@ -70,4 +70,4 @@ void retryOption()
 	else 
 		cout<<"Invalid input";
 		retryOption();
-}
+}*/
